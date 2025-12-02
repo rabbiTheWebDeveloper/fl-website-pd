@@ -7,8 +7,7 @@ export const getData = async (shopName) => {
       `${API_ENDPOINTS.BASE_URL}${API_ENDPOINTS.SHOP.INFO}`,
       {
         headers: { domain: shopName },
-        cache: "force-cache",
-        next: { revalidate: 900 }, // 24 hours
+        cache: "no-store",
       }
     );
 
@@ -19,13 +18,11 @@ export const getData = async (shopName) => {
     const [sliderRes, bannerRes] = await Promise.all([
       fetch(`${API_ENDPOINTS.BASE_URL}/shops/content?type=slider`, {
         headers: { "shop-id": domainInfo?.shop_id },
-        cache: "force-cache",
-        next: { revalidate: 900 },
+        cache: "no-store",
       }),
       fetch(`${API_ENDPOINTS.BASE_URL}/shops/content?type=banner`, {
         headers: { "shop-id": domainInfo?.shop_id },
-        cache: "force-cache",
-        next: { revalidate: 900 },
+        cache: "no-store",
       }),
     ]);
 
@@ -52,7 +49,7 @@ export const getOtherData = async (shopName, typeOfPage) => {
       headers: {
         domain: shopName,
       },
-     cache: "no-store",
+      cache: "no-store",
     }
   );
   if (!response.ok) {
@@ -66,7 +63,7 @@ export const getOtherData = async (shopName, typeOfPage) => {
       headers: {
         "shop-id": domainInfo?.shop_id,
       },
-        cache: "no-store",
+      cache: "no-store",
     }
   );
   const endTime = performance.now();
