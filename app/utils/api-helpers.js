@@ -1,8 +1,9 @@
 import { API_ENDPOINTS } from "../../config/ApiEndpoints";
 
 export const getData = async (shopName) => {
+   const url = new URL(`${API_ENDPOINTS.BASE_URL}${API_ENDPOINTS.SHOP.INFO}`);
   const domainRes = await fetch(
-    `${API_ENDPOINTS.BASE_URL}${API_ENDPOINTS.SHOP.INFO}`,
+    url,
     {
       headers: { domain: shopName },
       cache: "no-store",
