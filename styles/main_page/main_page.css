@@ -1,0 +1,2985 @@
+/* font-family: 'Wix Madefor Display', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
+
+/* font-family: 'Outfit', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+.MainLandingPage {
+    --main-color: #6B2CD1;
+    --main-color-bg: #c8b4ee;
+    --header-color: #292D34;
+    --text-color: #6C757D;
+    --bg-color: #F0E8FF;
+    --white-color: #FFF;
+}
+
+.MainLandingPage {
+    overflow: hidden;
+}
+
+.Preloader {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.scroll-to-top {
+    z-index: 9999;
+    background: var(--white-color);
+    color: var(--main-color);
+    box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 63px 93px -4px rgba(61, 90, 125, 0.08);
+    border: 1px solid #B095DF;
+    right: 15px;
+    bottom: 20px;
+}
+
+button.scroll-to-top svg {
+    font-size: 25px;
+    color: #6B2CD1;
+}
+
+.MainLandingPage .container {
+    /* max-width: 1360px;
+    padding: 0 30px; */
+}
+
+.MainLandingPage .SectionGaps {
+    margin-top: 80px;
+}
+
+/* Common CSS */
+.MainLandingPage {
+    /* font-family: 'Outfit', sans-serif !important; */
+    font-family: 'Wix Madefor Display', sans-serif !important;
+}
+
+.MainLandingPage :where(h2, h3, h4) {
+    color: var(--header-color);
+    font-weight: 700;
+}
+
+.MainLandingPage h1 {
+    font-size: 72px;
+    line-height: 85px;
+    color: var(--white-color);
+    font-weight: 800;
+    position: relative;
+    z-index: 2;
+}
+
+.MainLandingPage h1 span {
+    color: #FB8C00;
+    margin-right: 10px;
+}
+
+.MainLandingPage h2 {
+    font-size: 45px;
+    line-height: 55px;
+    font-weight: 800;
+}
+
+.MainLandingPage h3 {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 800;
+}
+
+.MainLandingPage h4 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 800;
+}
+
+.MainLandingPage h5 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.MainLandingPage p {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-color);
+}
+
+.MainLandingPage .d_flex {
+    display: flex;
+    align-items: center;
+}
+
+.MainLandingPage .d_justify {
+    justify-content: space-between;
+}
+
+.MainLandingPage :where(a, button) {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    transition: all linear .3s;
+    color: var(--header-color);
+}
+
+.MainLandingPage a:hover {
+    color: var(--main-color);
+}
+
+
+/* Bg */
+.MainLandingPage :where(a.bg, button.bg) {
+    position: relative;
+    display: inline-flex;
+    text-align: center;
+    color: var(--white-color);
+    text-decoration: none;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #6428C7, #FB8C00, #6428C7, #FB8C00);
+    box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.20) inset, 0px 10px 20px 0px rgba(87, 27, 185, 0.26);
+    background-size: 400%;
+    border-radius: 5px;
+    z-index: 1;
+    padding: 8px 30px !important;
+    font-weight: 400;
+    margin-top: 30px !important;
+    align-items: center;
+}
+
+.MainLandingPage :where(a.bg, button.bg) svg {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.MainLandingPage .bg:hover {
+    animation: animate 8s linear infinite;
+    color: var(--bg-color);
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+.MainLandingPage .bg:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #6428C7);
+    background-size: 400%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: .6s;
+}
+
+.MainLandingPage .bg:hover:before {
+    filter: blur(5px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+}
+
+/* end bg */
+
+
+.MainLandingPage .Video video {
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    z-index: 9;
+}
+
+.MainLandingPage .Video img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* =============================================================================
+    Start CountDown
+=============================================================================== */
+
+.MainLandingPage .CountDownContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.MainLandingPage .CountDown {
+    background: #FB8C00;
+    padding: 8px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.MainLandingPage .CountDown p {
+    color: var(--white-color);
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.MainLandingPage .CountDown .left {
+    display: flex;
+    align-items: center;
+}
+
+.MainLandingPage .CountDownBox {
+    margin-left: 10px;
+}
+
+.MainLandingPage .CountDownItem {
+    display: inline-block;
+    text-align: center;
+    background: #8049D9;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 80px;
+    margin-left: 10px;
+}
+
+.MainLandingPage .CountDownItem h4 {
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--white-color);
+    font-weight: 700;
+}
+
+.MainLandingPage .CountDownItem h6 {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--white-color);
+    font-weight: 400;
+    margin-top: -3px !important;
+}
+
+.MainLandingPage .CountDown .JoinNow a {
+    border: 0;
+    padding: 6px 20px;
+    border-radius: 30px;
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
+    display: inline-flex;
+    align-items: center;
+}
+
+.MainLandingPage .CountDown .JoinNow a svg {
+    margin-left: 10px;
+}
+
+.MainLandingPage .CountDown .JoinNow a:hover {
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/* =============================================================================
+    End CountDown
+=============================================================================== */
+
+
+/* =============================================================================
+    Start Menubar
+=============================================================================== */
+
+.MainLandingPage .MobileMenu {
+    display: none;
+}
+
+.MainLandingPage .Menubar {
+    box-shadow: 0 4px 50px rgb(0 0 0/5%);
+    background: var(--white-color);
+    padding: 15px 0;
+    padding-bottom: 10px;
+    position: fixed;
+    /* top: 60px; */
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    border-bottom: 1px solid var(--main-color-bg);
+}
+
+.MainLandingPage .Logo img {
+    height: 45px;
+}
+
+.MainLandingPage .Menu {
+    text-align: center;
+}
+
+.MainLandingPage .Menu ul li {
+    display: inline-block;
+}
+
+.MainLandingPage .Menu ul li a {
+    margin-right: 30px;
+}
+
+.MainLandingPage .Menu ul li a.active {
+    color: var(--main-color);
+}
+
+.MainLandingPage .Menu ul li:last-child a {
+    margin-right: 0;
+}
+
+.MainLandingPage .Login {
+    text-align: right;
+    padding: 0;
+}
+
+.MainLandingPage .Login li {
+    display: inline-block;
+}
+
+.MainLandingPage .Login li a.bg {
+    margin-left: 30px;
+    margin-top: 0 !important;
+}
+
+/* =============================================================================
+    End Menubar
+=============================================================================== */
+
+
+
+/* =============================================================================
+    Start Banner
+=============================================================================== */
+.MainLandingPage .Banner {
+    background: url('../../public/images/home_page/banner/banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    padding: 100px 0;
+    padding-top: 230px;
+    padding-bottom: 0;
+    text-align: center;
+    position: relative;
+    margin-top: -20px;
+}
+
+/* OverlayOne */
+
+.MainLandingPage .Banner .OverlayOne {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    border: 10px solid #FB8C00;
+    animation: OverlayOne 6s ease-in-out infinite;
+    position: absolute;
+    left: 30px;
+    bottom: 100px;
+}
+
+@keyframes OverlayOne {
+    0% {
+        transform: translateY(-50%) scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50%) scale(0);
+        opacity: 0;
+    }
+}
+
+/* OverlayOne End */
+
+/* OverlayOneImg */
+.MainLandingPage .Banner .OverlayOneImg {
+    position: absolute;
+    top: 370px;
+    left: 50px;
+    animation: OverlayOneImg 5s ease-in-out infinite;
+}
+
+@keyframes OverlayOneImg {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.MainLandingPage .Banner .OverlayOne.Two {
+    left: unset;
+    right: 50px;
+    bottom: unset;
+    top: 200px;
+}
+
+/* OverlayTwoImg */
+.MainLandingPage .OverlayTwoImg {
+    position: absolute;
+    top: 300px;
+    right: 80px;
+}
+
+/* OverlayThreeImg */
+.MainLandingPage .OverlayThreeImg {
+    position: absolute;
+    bottom: 100px;
+    right: 30px;
+}
+
+/* BannerShop */
+
+.MainLandingPage .BannerShop {
+    background: url('../../public/images/home_page/banner/shop-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.MainLandingPage .BannerShop .BannerShopImg {
+    margin-top: -310px;
+    z-index: 9;
+    position: relative;
+}
+
+.MainLandingPage .BannerShop .BannerShopImg img {
+    width: 100%;
+}
+
+.MainLandingPage .Banner h4 {
+    font-size: 25px;
+    font-weight: 40px;
+    padding: 15px 40px;
+    border-radius: 15px;
+    background: hsla(263, 62%, 56%, 1);
+    backdrop-filter: blur(40px);
+    display: inline-block;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(255, 255, 255, 0.47);
+    color: #FDD835;
+    font-weight: 400;
+    margin-top: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2.9px;
+}
+
+
+/* =============================================================================
+    End Banner
+=============================================================================== */
+
+
+
+
+
+
+
+/* =============================================================================
+    Start Platform
+=============================================================================== */
+
+.MainLandingPage .Platform {
+    position: relative;
+}
+
+.MainLandingPage .Platform .row {
+    --bs-gutter-x: 5rem;
+}
+
+
+/* overlayOne */
+
+.MainLandingPage .Platform :where(.overlayOne, .overlayTwo, .overlayThree) {
+    position: absolute;
+}
+
+.MainLandingPage .Platform :where(.overlayOne, .overlayTwo) {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--main-color-bg);
+    border: 10px solid #5ED9CD;
+    animation: OverlayOne 6s ease-in-out infinite;
+}
+
+@keyframes OverlayOne {
+    0% {
+        transform: translateY(-50%) scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50%) scale(0);
+        opacity: 0;
+    }
+}
+
+.MainLandingPage .Platform .overlayOne {
+    top: 100px;
+    left: 50px;
+}
+
+.MainLandingPage .Platform .overlayTwo {
+    bottom: 100px;
+    right: 100px;
+}
+
+.MainLandingPage .Platform .overlayThree {
+    right: 80px;
+    top: 10px;
+}
+
+/* PlatformRight */
+.MainLandingPage .PlatformRight h4 {
+    font-weight: 400;
+    color: var(--main-color);
+    margin-bottom: 10px !important;
+}
+
+.MainLandingPage .PlatformRight h2 {
+    margin-bottom: 30px !important;
+}
+
+.MainLandingPage .PlatformRight ul li {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.MainLandingPage .PlatformRight ul li:last-child {
+    margin-bottom: 0;
+}
+
+.MainLandingPage .PlatformRight ul li svg {
+    margin-right: 15px;
+    margin-bottom: -10px;
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+.MainLandingPage .Call {
+    background: var(--white-color);
+    padding: 15px 30px;
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0px 4px 39px 9px rgba(81, 69, 159, 0.09);
+    border-radius: 8px;
+}
+
+.MainLandingPage .Call .img {
+    margin-right: 20px;
+}
+
+.MainLandingPage .Call h3 {
+    color: var(--main-color);
+}
+
+.MainLandingPage .Call p {
+    color: var(--main-color);
+}
+
+/* =============================================================================
+    End Platform
+=============================================================================== */
+
+
+/* =============================================================================
+    Start SetUpOnlineShop
+=============================================================================== */
+
+.MainLandingPage .SetUpOnlineShopContent {
+    text-align: center;
+}
+
+.MainLandingPage .SetUpOnlineShop {
+    background: url('../../public/images/home_page/SetUpOnlineShop-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    position: relative;
+    z-index: 9;
+}
+
+.MainLandingPage .SetUpOnlineShop .Header {
+    margin-top: 230px;
+    text-align: center;
+}
+
+.MainLandingPage .SetUpOnlineShop .Header p {
+    color: var(--main-color-bg);
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 50%;
+}
+
+/* overlayOne */
+.MainLandingPage .SetUpOnlineShop :where(.overlayOne, .overlayTwo) {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    border: 10px solid #FB8C00;
+    animation: OverlayOne 6s ease-in-out infinite;
+    position: absolute;
+}
+
+@keyframes OverlayOne {
+    0% {
+        transform: translateY(-50%) scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50%) scale(0);
+        opacity: 0;
+    }
+}
+
+.MainLandingPage .SetUpOnlineShop .overlayOne {
+    top: 300px;
+    left: 50px;
+}
+
+.MainLandingPage .SetUpOnlineShop .overlayTwo {
+    bottom: 100px;
+    right: 100px;
+}
+
+.MainLandingPage .SetUpOnlineShop .overlayThree {
+    position: absolute;
+    right: 300px;
+    top: 250px;
+}
+
+/* SetUpOnlineShop */
+
+.MainLandingPage .SetUpOnlineShopContent {
+    margin-top: 50px;
+}
+
+.MainLandingPage .SetUpOnlineShopItem {
+    border: 5px solid var(--main-color-bg);
+    display: inline-block;
+    background: var(--bg-color);
+    padding: 15px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 9;
+}
+
+.MainLandingPage .SetUpOnlineShopItem::after {
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 0 20px 25px;
+    border-color: transparent transparent transparent var(--main-color-bg);
+    transform: rotate(0deg);
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rightArrow 3s ease-in-out infinite;
+}
+
+@keyframes rightArrow {
+    0% {
+        left: 100%;
+    }
+
+    50% {
+        left: 102%;
+        border-width: 20px 0 20px 32px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.MainLandingPage .SetUpOnlineShopText {
+    background: var(--white-color);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.MainLandingPage .SetUpOnlineShopText h4 {
+    margin-top: 10px !important;
+}
+
+.MainLandingPage .SetUpOnlineShopText img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.MainLandingPage .SetUpOnlineShopFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* =============================================================================
+    End SetUpOnlineShop
+=============================================================================== */
+
+
+/* =============================================================================
+    Start BuiltForEveryone
+=============================================================================== */
+.MainLandingPage .BuiltForEveryone {
+    background: url('../../public/images/home_page/built-for-you.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 150px 0;
+    margin-top: -250px;
+    z-index: 1;
+}
+
+.MainLandingPage .BuiltForEveryone .Header {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.MainLandingPage .BuiltForEveryone .Header h4 {
+    color: var(--main-color-bg);
+    font-weight: 400;
+}
+
+.MainLandingPage .BuiltForEveryone .Header h2 {
+    color: var(--white-color);
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/* BuiltForEveryoneTabs */
+.MainLandingPage .BuiltForEveryoneTabs {
+    margin-top: 50px;
+}
+
+.MainLandingPage .BuiltForEveryoneTabs .nav-tabs {
+    border: none;
+    justify-content: center;
+}
+
+.MainLandingPage .BuiltForEveryoneTabs li {
+    margin: 0 10px;
+}
+
+.MainLandingPage .BuiltForEveryoneTabs button {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 10px 20px;
+    border: 1px solid var(--white-color);
+    border-radius: 5px;
+    color: var(--white-color);
+}
+
+.MainLandingPage .BuiltForEveryoneTabs button.active,
+.MainLandingPage .BuiltForEveryoneTabs button:hover {
+    background: var(--white-color);
+    color: var(--header-color);
+}
+
+
+.MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent {
+    margin-top: 50px;
+}
+
+.MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent h3 {
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+.MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent p {
+    color: var(--main-color-bg);
+    margin-top: 20px;
+}
+
+.MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Replace {
+    margin-top: 30px;
+}
+
+.MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent h4 {
+    color: var(--white-color);
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Left img {
+    margin-left: 10px;
+}
+
+.MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Left {
+    width: 30%;
+}
+
+.MainLandingPage .BuiltForEveryoneTabs a.bg {
+    background: var(--white-color);
+    color: var(--main-color);
+}
+
+.MainLandingPage .BuiltForEveryoneTabs a.bg:hover {
+    background: linear-gradient(90deg, #6428C7, #FB8C00);
+    color: var(--bg-color);
+}
+
+.MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Right {
+    width: 70%;
+}
+
+.MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Right .Video {
+    border-radius: 15px;
+    background: linear-gradient(180deg, #9D69F1 0%, #6E33CE 100%);
+    backdrop-filter: blur(26px);
+    padding: 20px;
+}
+
+.MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Right .Video video {
+    border-radius: 15px;
+}
+
+
+/* =============================================================================
+    End BuiltForEveryone
+=============================================================================== */
+
+
+/* =============================================================================
+    Start PowerfulFunnel
+=============================================================================== */
+
+.MainLandingPage .PowerfulFunnel {
+    position: relative;
+}
+
+.MainLandingPage .PowerfulFunnel .Frame {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.MainLandingPage .PowerfulFunnel h2 {
+    text-align: center;
+}
+
+.MainLandingPage .PowerfulFunnelContent {
+    margin-top: 50px;
+}
+
+.MainLandingPage .PowerfulFunnelItem {
+    border-radius: 8px;
+    background: var(--white-color);
+    box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 63px 93px -4px rgba(61, 90, 125, 0.08);
+    padding: 30px;
+    text-align: center;
+    transition: all linear .3s;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.MainLandingPage .PowerfulFunnelItem a {
+    display: none;
+}
+
+.MainLandingPage .PowerfulFunnelItem .HoverOverlayOne {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: all linear .8s;
+    transform: translate(-60px, -30px);
+    opacity: 0;
+}
+
+.MainLandingPage .PowerfulFunnelItem .HoverOverlayTwo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all linear .8s;
+    transform: translate(100px, 100px);
+    opacity: 0;
+}
+
+.MainLandingPage .PowerfulFunnelItem:hover {
+    background: var(--main-color);
+}
+
+.MainLandingPage .PowerfulFunnelItem:hover .HoverOverlayOne {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+.MainLandingPage .PowerfulFunnelItem:hover .HoverOverlayTwo {
+    opacity: 1;
+    transform: translate(50px, 50px);
+}
+
+.MainLandingPage .PowerfulFunnelItem .Image {
+    background: var(--bg-color);
+    height: 115px;
+    width: 115px;
+    border-radius: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    z-index: 9;
+}
+
+.MainLandingPage .PowerfulFunnelItem .Image .Img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin: auto;
+}
+
+.MainLandingPage .PowerfulFunnelItem .Image .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* OverlayOneImg */
+.MainLandingPage .PowerfulFunnelItem:hover .Image .overlay {
+    animation: OverlayOneImg 7s ease-in-out infinite;
+}
+
+@keyframes OverlayOneImg {
+    from {
+        transform: translate(-50%, -50%)rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%)rotate(360deg);
+    }
+}
+
+
+.MainLandingPage .PowerfulFunnelItem h4 {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fb8c00;
+}
+
+.MainLandingPage .PowerfulFunnelItem:hover p {
+    color: var(--white-color);
+}
+
+.MainLandingPage .PowerfulFunnelItem:hover h4 {
+    color: #fb8c00;
+}
+
+/* =============================================================================
+    End PowerfulFunnel
+=============================================================================== */
+
+
+
+
+
+
+
+/* =============================================================================
+    Start IfHaveFunnelLiner
+=============================================================================== */
+
+.MainLandingPage .IfHaveFunnelLiner {
+    position: relative;
+}
+
+.MainLandingPage .IfHaveFunnelLiner h2 {
+    text-align: center;
+}
+
+.MainLandingPage .IfHaveFunnelLiner .Video {
+    margin-top: 30px;
+    margin-bottom: 2px;
+}
+
+.MainLandingPage .IfHaveFunnelLiner .Video video {
+    height: 600px;
+}
+
+.MainLandingPage .IfHaveFunnelLiner :where(.overlayOne, .overlayTwo) {
+    position: absolute;
+}
+
+.MainLandingPage .IfHaveFunnelLiner :where(.overlayOne, .overlayTwo) {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--main-color-bg);
+    border: 10px solid #5ED9CD;
+    animation: OverlayOne 6s ease-in-out infinite;
+}
+
+.MainLandingPage .IfHaveFunnelLiner .overlayOne {
+    top: 100px;
+    left: 50px;
+}
+
+.MainLandingPage .IfHaveFunnelLiner .overlayTwo {
+    bottom: 100px;
+    right: 100px;
+}
+
+.MainLandingPage .IfHaveFunnelLiner .Frame1 {
+    position: absolute;
+    top: 400px;
+    left: 150px;
+}
+
+.MainLandingPage .IfHaveFunnelLiner .Frame2 {
+    position: absolute;
+    top: 250px;
+    right: 120px;
+}
+
+.MainLandingPage .IfHaveFunnelLiner .IfHaveFunnelLinerVideo {
+    margin-top: 50px;
+}
+
+
+/* =============================================================================
+    End IfHaveFunnelLiner
+=============================================================================== */
+
+
+
+/* =============================================================================
+    Start SingleLanding
+=============================================================================== */
+.MainLandingPage .SingleLanding {
+    background: url('../../public/images//home_page/single-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -8px;
+    padding: 100px 0;
+}
+
+.MainLandingPage .SingleLanding .Header {
+    text-align: center;
+}
+
+.MainLandingPage .SingleLanding .Header :where(h2, p) {
+    color: var(--white-color);
+}
+
+.MainLandingPage .SingleLanding .Header p {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/*.MainLandingPage  SingleLandingContent */
+.MainLandingPage .SingleLandingContent {
+    margin-top: 50px;
+}
+
+.MainLandingPage .SingleLandingItem {
+    padding: 20px;
+    border-radius: 15px;
+    background: var(--white-color);
+    border: 1px solid var(--bg-color);
+    margin-bottom: 30px;
+    text-align: center;
+    transition: all linear .3s;
+}
+
+.MainLandingPage .SingleLandingItem .img {
+    position: relative;
+}
+
+.MainLandingPage .SingleLandingItem:hover {
+    transform: translateY(-5px);
+}
+
+.MainLandingPage .SingleLandingItem .text {
+    margin-top: 20px;
+}
+
+.MainLandingPage .SingleLandingItem img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 1px solid var(--bg-color);
+    padding: 5px;
+}
+
+.MainLandingPage .SingleLandingItem h4 {
+    color: #FB8C00;
+}
+
+.MainLandingPage .SingleLandingItem a {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px !important;
+}
+
+.MainLandingPage .SingleLandingContent .ViewAll {
+    text-align: center;
+}
+
+.MainLandingPage .SingleLandingContent .ViewAll .LandingAll {
+    background: var(--white-color);
+    color: var(--main-color);
+    text-align: center;
+}
+
+.MainLandingPage .SingleLandingContent .ViewAll .LandingAll:hover {
+    background: #FB8C00;
+}
+
+/* =============================================================================
+    End SingleLanding
+=============================================================================== */
+
+
+/* =============================================================================
+    Start MultiLanding
+=============================================================================== */
+.MainLandingPage .MultiLanding {
+    background: #FFF;
+    padding: 0;
+    position: relative;
+}
+
+.MainLandingPage .MultiLanding :where(.FrameFour, .FrameFive, .FrameSix, .MultiLandingBg) {
+    position: absolute;
+}
+
+.MainLandingPage .MultiLanding .FrameFour {
+    top: 50px;
+    left: 80px;
+}
+
+.MainLandingPage .MultiLanding .FrameFive {
+    bottom: 50px;
+    left: 80px;
+}
+
+.MainLandingPage .MultiLanding .FrameSix {
+    bottom: 100px;
+    right: 50px;
+    z-index: 9;
+}
+
+.MainLandingPage .MultiLanding .SingleLandingContent {
+    z-index: 9;
+    position: relative;
+}
+
+.MainLandingPage .MultiLanding .MultiLandingBg {
+    bottom: 0;
+    right: 0;
+}
+
+.MainLandingPage .MultiLanding .Header h2 {
+    color: var(--header-color);
+}
+
+.MainLandingPage .MultiLanding .Header p {
+    color: var(--text-color);
+}
+
+.MainLandingPage .ComingSoon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .80);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =============================================================================
+    End MultiLanding
+=============================================================================== */
+
+
+/* =============================================================================
+    Start MobileFriendly
+=============================================================================== */
+
+.MainLandingPage .MobileFriendly {
+    position: relative;
+}
+
+.MainLandingPage .MobileFriendly :where(.Frame7, .Frame8, .Frame9) {
+    position: absolute;
+}
+
+.MainLandingPage .MobileFriendly .Frame7 {
+    bottom: 0;
+    left: 50%;
+}
+
+.MainLandingPage .MobileFriendly .Frame8 {
+    bottom: 50px;
+    left: 100px;
+}
+
+.MainLandingPage .MobileFriendly .Frame9 {
+    top: 50px;
+    right: 100px;
+}
+
+.MainLandingPage .MobileFriendlyLeftBox {
+    margin-top: 50px;
+
+}
+
+.MainLandingPage .MobileFriendlyItem {
+    border-radius: 8px;
+    background: var(--white-color);
+    box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 63px 93px -4px rgba(61, 90, 125, 0.08);
+    padding: 30px;
+    display: inline-block;
+    text-align: center;
+    width: 48%;
+    position: relative;
+    z-index: 9;
+}
+
+.MainLandingPage .MobileFriendlyItem:nth-child(even) {
+    margin-top: 20px;
+}
+
+.MainLandingPage .MobileFriendlyItem h4 {
+    margin-top: 10px;
+}
+
+.MainLandingPage .MobileFriendlyItem img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.MainLandingPage .MobileFriendlyItem h4 {
+    color: var(--main-color);
+}
+
+.MainLandingPage .MobileFriendlyLeftBox {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.MainLandingPage .MobileFriendlyLeftBox::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: var(--main-color-bg);
+    z-index: 1;
+}
+
+/* =============================================================================
+    End MobileFriendly
+=============================================================================== */
+
+
+
+/* =============================================================================
+    Start PersonalPlan
+=============================================================================== */
+.MainLandingPage .PersonalPlan {
+    background: url('../../public/images/home_page/personal-plan.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    background-size: cover;
+    height: 1310px;
+    position: relative;
+    overflow: hidden;
+}
+
+.MainLandingPage .PersonalPlan .Header {
+    text-align: center;
+    position: relative;
+    z-index: 9;
+}
+
+.MainLandingPage .PersonalPlan .Header h2 {
+    color: var(--white-color);
+}
+
+.MainLandingPage .PersonalPlan .Header h4 {
+    color: var(--bg-color);
+    font-weight: 400;
+}
+
+/* PersonalPlanContent */
+
+.MainLandingPage .PersonalPlanContent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* height: 100%; */
+    /* flex-wrap: wrap; */
+}
+.rfm-child {
+    height: 76rem;
+}
+.MainLandingPage .PersonalPlanContent.Mobile {
+    display: none;
+}
+
+.MainLandingPage .PersonalPlanItem {
+    width: 19%;
+    border-radius: 15px;
+    background: var(--white-color);
+    box-shadow: 0px 54.62883758544922px 36.139076232910156px 0px rgba(0, 0, 0, 0.02), 0px 20px 66.44757843017578px 0px rgba(0, 0, 0, 0.02), 0px 22px 113.45989227294922px 0px rgba(0, 0, 0, 0.03);
+    margin-top: 50px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.MainLandingPage .PersonalPlanItem .img {
+    position: relative;
+}
+
+.MainLandingPage .PersonalPlanItem img {
+    width: 100%;
+}
+
+.MainLandingPage .PersonalPlanItem .img .price {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -15px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.MainLandingPage .PersonalPlanItem .img .price h4 {
+    font-size: 24px;
+    line-height: 35px;
+    color: var(--white-color);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.MainLandingPage .PersonalPlanItem .img .price h3 {
+    color: var(--white-color);
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MainLandingPage .PersonalPlanItem .img .price h3 img {
+    height: 60px;
+    width: auto;
+    margin-top: 5px;
+}
+
+.MainLandingPage .PersonalPlanItem .img .price h3 svg {
+    margin-left: -5px;
+    margin-bottom: -10px;
+    font-size: 30px;
+}
+
+.MainLandingPage .PersonalPlanItem .Monthly {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.MainLandingPage .PersonalPlanItem .Monthly h6 {
+    font-size: 18px;
+    line-height: 26px;
+    background: #823AF6;
+    font-weight: 500;
+    padding: 6px 25px !important;
+    border-radius: 30px;
+    color: var(--white-color);
+}
+
+.MainLandingPage .PersonalPlanItem .Monthly.two h6 {
+    background: #53D1AE;
+}
+
+.MainLandingPage .PersonalPlanItem .Monthly.three h6 {
+    background: #FFCC70;
+}
+
+.MainLandingPage .PersonalPlanItem .Monthly.four h6 {
+    background: #49D4FF;
+}
+
+.MainLandingPage .PersonalPlanItem .Monthly.five h6 {
+    background: #B9C736;
+}
+
+.MainLandingPage .PersonalPlanItem .text {
+    margin: 15px 0 !important;
+    margin-top: 30px !important;
+    text-align: center;
+}
+
+.MainLandingPage .PersonalPlanItem .text h5 {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.MainLandingPage .PersonalPlanItem .text h5 span {
+    position: relative;
+    z-index: 9;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 15px;
+    background: #F6F1FF;
+    padding: 5px 15px;
+    display: inline-block;
+    color: var(--main-color);
+}
+
+.MainLandingPage .PersonalPlanItem .text h5.two span {
+    background: #E9FFF9;
+    color: #26BF94;
+}
+
+.MainLandingPage .PersonalPlanItem .text h5.three span {
+    background: #FFF7E9;
+    color: #F4B849;
+}
+
+.MainLandingPage .PersonalPlanItem .text h5.four span {
+    background: #EBFAFF;
+    color: #23B7E5;
+}
+
+.MainLandingPage .PersonalPlanItem .text h5.five span {
+    background: #F6FAD4;
+    color: #CAD844;
+}
+
+.MainLandingPage .PersonalPlanItem .text h5::after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 130%;
+    border: 1px dashed var(--main-color);
+    z-index: 1;
+}
+
+.MainLandingPage .PersonalPlanItem .text h5.two::after {
+    border: 1px dashed #26BF94;
+}
+
+.MainLandingPage .PersonalPlanItem .text h5.three::after {
+    border: 1px dashed #F4B849;
+}
+
+.MainLandingPage .PersonalPlanItem .text h5.four::after {
+    border: 1px dashed #23B7E5;
+}
+
+.MainLandingPage .PersonalPlanItem .text h5.five::after {
+    border: 1px dashed #CAD844;
+}
+
+.MainLandingPage .PersonalPlanItem .text ul {
+    margin-top: 20px !important;
+}
+
+.MainLandingPage .PersonalPlanItem .text ul li {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--bg-color)
+}
+
+.MainLandingPage .PersonalPlanItem .text ul li:last-child {
+    border-bottom: 0;
+}
+
+.MainLandingPage .PersonalPlanItem .GetStart {
+    text-align: center;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.MainLandingPage .PersonalPlanItem .GetStart a {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 26px;
+    background: #823AF6;
+    font-weight: 500;
+    padding: 10px 40px;
+    border-radius: 30px;
+    color: var(--white-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.MainLandingPage .PersonalPlanItem .GetStart.two a {
+    background: #26BF94;
+}
+
+.MainLandingPage .PersonalPlanItem .GetStart.three a {
+    background: #F5B849;
+}
+
+.MainLandingPage .PersonalPlanItem .GetStart.four a {
+    background: #23B4E1;
+}
+
+.MainLandingPage .PersonalPlanItem .GetStart.five a {
+    background: #CAD844;
+}
+
+/* =============================================================================
+    End PersonalPlan
+=============================================================================== */
+
+
+
+
+
+
+
+/* =============================================================================
+    Start AskQuestion
+=============================================================================== */
+.MainLandingPage .AskQuestion h2 {
+    text-align: center;
+}
+
+.MainLandingPage .AskQuestionTabs {
+    margin-top: 50px;
+}
+
+.MainLandingPage .AskQuestionTabs button {
+    padding: 20px !important;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    /* border: 0 !important; */
+    border-bottom: 1px solid var(--bg-color) !important;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.MainLandingPage .AskQuestionTabs button:focus {
+    outline: 0;
+    border-color: none;
+    box-shadow: none;
+}
+
+.MainLandingPage .AskQuestionTabs button img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+.MainLandingPage .AskQuestionTabs button img.minus {
+    width: 30px;
+    height: 30px;
+}
+
+.MainLandingPage .AskQuestionTabs button .plus {
+    display: none;
+}
+
+.MainLandingPage .AskQuestionTabs button.collapsed .minus {
+    display: none;
+}
+
+.MainLandingPage .AskQuestionTabs button.accordion-button {
+    background: var(--main-color);
+    color: var(--white-color);
+}
+
+.MainLandingPage .AskQuestionTabs .accordion-body {
+    background: var(--main-color);
+    border-radius: 0 0 8px 8px;
+    margin-top: -2px;
+}
+
+.MainLandingPage .AskQuestionTabs .accordion-body p {
+    color: var(--bg-color);
+    font-weight: 300;
+}
+
+.MainLandingPage .AskQuestionTabs button.accordion-button.collapsed {
+    background: #F8F4FF;
+    color: var(--header-color);
+}
+
+.MainLandingPage .AskQuestionTabs button.collapsed .plus {
+    display: block;
+}
+
+.MainLandingPage .AskQuestionTabs .accordion-item {
+    border: 0;
+    margin-bottom: 10px;
+}
+
+.MainLandingPage .accordion-button::after {
+    display: none;
+}
+
+
+
+/* =============================================================================
+    End AskQuestion
+=============================================================================== */
+
+
+
+/* =============================================================================
+    Start StartSelling
+=============================================================================== */
+
+
+.MainLandingPage .StartSellingBox {
+    border-radius: 16px;
+    background: url('../../public/images/home_page/start-selling-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 200px;
+    margin-bottom: -200px;
+}
+
+.MainLandingPage .StartSellingBox {
+    text-align: center;
+}
+
+.MainLandingPage .StartSellingBox h2 {
+    color: var(--white-color);
+}
+
+.MainLandingPage .StartSellingBox p {
+    color: var(--white-color);
+    margin-top: 10px !important;
+    font-weight: 300;
+}
+
+.MainLandingPage .StartSellingBox .customInput {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+.MainLandingPage .StartSellingBox .customInput input {
+    border-radius: 10px;
+    padding: 18px 20px;
+    background: var(--white-color);
+}
+
+.MainLandingPage .StartSellingBox .customInput button.bg {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    width: auto;
+    margin-top: 0;
+    color: var(--white-color);
+}
+
+
+/* =============================================================================
+    End StartSelling
+=============================================================================== */
+
+
+
+/* =============================================================================
+    Start Footer
+=============================================================================== */
+.MainLandingPage .Footer {
+    /* background: url('../../public/images/home_page/footer-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background: #F8F4FF;
+    padding: 30px 0;
+    padding-top: 300px;
+}
+
+.MainLandingPage .Footer img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.MainLandingPage .Footer .FooterLogo {
+    margin-right: 100px;
+}
+
+.MainLandingPage .Footer p {
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 24px;
+}
+
+.MainLandingPage .socialIcon {
+    margin-top: 20px;
+}
+
+.MainLandingPage .socialIcon a {
+    margin-right: 20px;
+}
+
+.MainLandingPage .socialIcon a img {
+    width: 40px;
+    height: auto;
+}
+
+.MainLandingPage .Footer .FooterItem h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    position: relative;
+}
+
+.MainLandingPage .Footer .FooterItem h3::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 20%;
+    background: linear-gradient(270deg, #6428C7 0%, #FB8C00 100%);
+}
+
+.MainLandingPage .Footer .FooterItem li {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.MainLandingPage .Footer .FooterItem .svg {
+    margin-right: 10px;
+    background: var(--main-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MainLandingPage .Footer a {
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.MainLandingPage .Footer p {
+    width: 80%;
+    font-size: 14px;
+}
+
+.MainLandingPage .Footer .FooterItem p {
+    width: 80%;
+}
+
+.MainLandingPage .Footer a {
+    font-size: 14px;
+    width: 70%;
+}
+
+.MainLandingPage .Footer .FooterItem li a:hover {
+    color: var(--main-color);
+}
+
+.MainLandingPage .copyRight {
+    text-align: center;
+    border-top: 1px solid var(--bg-color);
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+.MainLandingPage .copyRight a {
+    color: var(--main-color);
+    margin: 0 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* =============================================================================
+    End Footer
+=============================================================================== */
+
+
+
+
+/* =============================================================================
+    Start
+=============================================================================== */
+
+
+
+
+/* =============================================================================
+    End
+=============================================================================== */
+
+
+
+
+/* =============================================================================
+    Start
+=============================================================================== */
+
+
+
+
+/* =============================================================================
+    End
+=============================================================================== */
+
+
+
+/* =============================================================================
+    Start landingPagePagination
+=============================================================================== */
+.landingPagePagination ul {
+    justify-content: center;
+}
+
+.landingPagePagination ul li {
+    margin: 0 5px;
+}
+
+.landingPagePagination ul li button {
+    background: var(--bg-color);
+}
+
+.landingPagePagination ul li button.Mui-selected {
+    background: #FB8C00;
+    color: var(--white-color);
+}
+
+
+
+
+/* =============================================================================
+    End 
+=============================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399px) {
+
+    .MainLandingPage .container {
+        padding: 0 !important;
+        max-width: 90%;
+    }
+
+    .MainLandingPage h2 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .MainLandingPage h3 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .MainLandingPage h4 {
+        font-size: 18px;
+    }
+
+    .MainLandingPage h5 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .MainLandingPage .CountDown .left p {
+        width: 55%;
+        font-size: 13px;
+    }
+
+    .MainLandingPage .CountDownItem {
+        padding: 3px 5px;
+        width: 50px;
+        margin-left: 5px;
+    }
+
+    .MainLandingPage .CountDownBox {
+        margin-left: 5px;
+    }
+
+    .MainLandingPage .CountDownItem h4 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .MainLandingPage .CountDownItem h6 {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .MainLandingPage .CountDown .JoinNow a {
+        padding: 6px 20px;
+        font-size: 16px;
+    }
+
+    .MainLandingPage h1 {
+        font-size: 55px;
+        line-height: 65px;
+    }
+
+    .MainLandingPage .Banner h4 {
+        margin-top: 40px;
+    }
+
+    .MainLandingPage .BannerShop .BannerShopImg {
+        margin-top: -390px;
+    }
+
+    .MainLandingPage .Call .img img {
+        height: 50px;
+    }
+
+    .MainLandingPage .SetUpOnlineShopFlex {
+        gap: 20px;
+    }
+
+    .MainLandingPage .SetUpOnlineShopItem {
+        padding: 10px;
+    }
+
+    .MainLandingPage .SetUpOnlineShopText {
+        padding: 15px;
+    }
+
+    .MainLandingPage .SetUpOnlineShopText img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .MainLandingPage .SetUpOnlineShopText h4 {
+        line-height: 22px;
+    }
+
+    .MainLandingPage .BuiltForEveryone .Header h2 {
+        width: 70%;
+    }
+
+    .MainLandingPage .SetUpOnlineShop .overlayThree {
+        right: 50px;
+    }
+
+    .MainLandingPage .Platform .overlayThree {
+        right: 14px;
+        top: 0px;
+    }
+
+    .MainLandingPage .SectionGaps {
+        margin-top: 60px;
+    }
+
+    .MainLandingPage .PowerfulFunnelItem {
+        padding: 15px;
+    }
+
+    .MainLandingPage .PowerfulFunnelItem .Image {
+        height: 80px;
+        width: 80px;
+    }
+
+    .MainLandingPage .PowerfulFunnelItem .Image .Img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .MainLandingPage .PowerfulFunnelItem h4 {
+        height: 60px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .MainLandingPage .PowerfulFunnelItem .Image .overlay {
+        width: 78px;
+        height: 78px;
+    }
+
+    .MainLandingPage .PowerfulFunnelItem p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .MainLandingPage .PowerfulFunnelItem img {
+        height: 50px;
+    }
+
+    .MainLandingPage .IfHaveFunnelLiner .Video video {
+        height: 400px;
+    }
+
+    .MainLandingPage .SingleLanding .Header p {
+        width: 100%;
+    }
+
+    .MainLandingPage .MultiLanding .MultiLandingBg {
+        height: 300px;
+    }
+
+    .MainLandingPage .SingleLandingItem h4 {
+        font-size: 15px;
+    }
+
+    .MainLandingPage .MobileFriendlyLeftBox {
+        gap: 15px;
+    }
+
+    .MainLandingPage .MobileFriendlyItem {
+        padding: 20px;
+    }
+
+    .MainLandingPage .MobileFriendlyItem:nth-child(even) {
+        margin-top: 15px;
+    }
+
+    .MainLandingPage .MobileFriendlyItem img {
+        width: 70px;
+        height: 70px;
+    }
+    .MainLandingPage .PersonalPlanContent {
+    
+        /* height: 100%; */
+        flex-wrap: wrap;
+    }
+
+    .MainLandingPage .MobileFriendlyItem h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .MainLandingPage .StartSellingBox {
+        padding: 60px;
+        margin-bottom: -180px;
+    }
+
+    .MainLandingPage .Footer p {
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .MainLandingPage .Footer {
+        padding-top: 235px;
+    }
+
+    .MainLandingPage .Footer a {
+        font-size: 14px;
+    }
+
+    .MainLandingPage .Footer .FooterItem li {
+        margin-bottom: 5px;
+    }
+
+    .MainLandingPage .Footer .FooterLogo {
+        margin-right: 30px;
+    }
+
+    .MainLandingPage .Footer .row {
+        --bs-gutter-x: 0px;
+    }
+
+    .MainLandingPage .Footer .row .row {
+        --bs-gutter-x: 0px;
+    }
+
+    .MainLandingPage .Footer a {
+        font-size: 14px;
+        width: 70%;
+    }
+
+    .MainLandingPage .Footer .FooterItem p {
+        width: 70%;
+    }
+
+    .MainLandingPage .MultiLanding .FrameFour {
+        top: 10px;
+        left: 40px;
+    }
+
+    .MainLandingPage .SingleLanding {
+        padding: 60px 0;
+    }
+
+    .MainLandingPage .SetUpOnlineShop .Header p {
+        width: 70%;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent {
+        gap: 25px;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent p {
+        margin-top: 10px;
+    }
+
+    .MainLandingPage p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent h4 {
+        font-size: 14px;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Replace {
+        margin-top: 15px;
+    }
+
+    .MainLandingPage .BuiltForEveryone {
+        padding: 100px 0;
+    }
+
+    .MainLandingPage .PersonalPlanItem .img .price h4 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .MainLandingPage .PersonalPlanItem .img .price h3 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    .MainLandingPage .PersonalPlanItem .Monthly h6 {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 5px 25px !important;
+    }
+
+    .MainLandingPage .PersonalPlanItem .text h5 span {
+        font-size: 12px;
+    }
+
+    .MainLandingPage .PersonalPlanItem .text {
+        margin: 10px 0 !important;
+        margin-top: 20px !important;
+    }
+
+    .MainLandingPage .PersonalPlanItem .text ul li {
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 7px;
+        padding-bottom: 7px;
+    }
+
+    .MainLandingPage .PersonalPlanItem .GetStart a {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 10px 25px;
+    }
+
+    .MainLandingPage .SetUpOnlineShop .Header {
+        margin-top: 180px;
+    }
+
+    .MainLandingPage .PowerfulFunnelItem {
+        padding: 15px;
+        padding-bottom: 20px;
+        height: 255px;
+    }
+
+    .MainLandingPage .PersonalPlan {
+        height: 1100px;
+    }
+
+    .MainLandingPage .SetUpOnlineShop {
+        height: 650px;
+    }
+
+    .MainLandingPage .AskQuestion {
+        margin-top: -100px;
+    }
+
+    .MainLandingPage .copyRight a {
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1023px) {
+    .MainLandingPage .JoinNow {
+        width: 160px;
+        text-align: center;
+    }
+    .MainLandingPage .PersonalPlanContent {
+    
+        /* height: 100%; */
+        flex-wrap: wrap;
+    }
+
+    .MainLandingPage .CountDown .JoinNow a {
+        padding: 5px 12px;
+        font-size: 14px;
+    }
+
+    .MainLandingPage .Logo img {
+        height: auto;
+        width: 100%;
+    }
+
+    .MainLandingPage .Menu ul li a {
+        margin-right: 12px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .MainLandingPage .Login li a {
+        font-size: 16px;
+    }
+
+    .MainLandingPage .Login li a.bg {
+        margin-left: 10px;
+        margin-top: 0 !important;
+        padding: 5px 18px !important;
+        font-size: 15px;
+    }
+
+    .MainLandingPage h1 {
+        font-size: 45px;
+        line-height: 55px;
+    }
+
+    .MainLandingPage .Banner {
+        height: 600px;
+        padding: 80px 0;
+    }
+
+    .MainLandingPage .BannerShop .BannerShopImg {
+        margin-top: -200px;
+    }
+
+    .MainLandingPage .Banner .OverlayOneImg {
+        top: 165px;
+        left: 30px;
+        height: 50px;
+    }
+
+    .MainLandingPage .Banner .OverlayOne {
+        width: 45px;
+        height: 45px;
+    }
+
+    .MainLandingPage .OverlayThreeImg {
+        bottom: 0;
+        right: -37px;
+    }
+
+    .MainLandingPage .OverlayTwoImg {
+        top: 250px;
+        right: 20px;
+        height: 60px;
+    }
+
+    .MainLandingPage .Banner h4 {
+        font-size: 20px;
+    }
+
+    .MainLandingPage .PlatformRight {
+        text-align: center;
+    }
+
+    .MainLandingPage .SetUpOnlineShopText img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .MainLandingPage .SetUpOnlineShopText h4 {
+        margin-top: 10px !important;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .MainLandingPage .SetUpOnlineShopFlex {
+        gap: 10px;
+    }
+
+    .MainLandingPage .SetUpOnlineShopItem {
+        padding: 8px;
+    }
+
+    .MainLandingPage .SetUpOnlineShopText {
+        padding: 15px;
+    }
+
+    .MainLandingPage .SetUpOnlineShopItem::after {
+        border-width: 12px 0 12px 14px;
+    }
+
+    @keyframes rightArrow {
+        0% {
+            left: 100%;
+        }
+
+        50% {
+            left: 102%;
+            border-width: 15px 0 15px 20px;
+        }
+
+        100% {
+            left: 100%;
+        }
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs li {
+        margin: 0 5px;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs button {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 6px 12px;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Replace img {
+        width: 100%;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Replace img {
+        width: 100%;
+        height: 30px;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent {
+        gap: 15px;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Right .Video {
+        border-radius: 12px;
+        padding: 12px;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Right .Video video {
+        border-radius: 10px;
+    }
+
+    .MainLandingPage h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent p {
+        margin-top: 5px;
+    }
+
+    .MainLandingPage :where(a, button) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .MainLandingPage :where(a.bg, button.bg) {
+        margin-top: 20px !important;
+    }
+
+    .MainLandingPage .PowerfulFunnel .Frame {
+        position: absolute;
+        top: -57px;
+        left: 20px;
+    }
+
+    .MainLandingPage .PowerfulFunnel .Frame img {
+        height: 50px;
+    }
+
+    .MainLandingPage .PowerfulFunnelItem {
+        padding: 20px;
+    }
+
+    .MainLandingPage .PowerfulFunnelItem p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .MainLandingPage .MultiLanding .FrameFour {
+        top: 10px;
+        left: 15px;
+        height: 50px;
+    }
+
+    .MainLandingPage .PowerfulFunnelItem h4 {
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    .MainLandingPage .PersonalPlan {
+        height: auto;
+        margin-bottom: 100px;
+    }
+
+    .MainLandingPage .PersonalPlanItem {
+        width: 32%;
+        margin-top: 50px;
+    }
+
+    .MainLandingPage .PlatformRight {
+        margin-top: 30px;
+    }
+
+    .MainLandingPage .StartSellingBox .customInput button.bg {
+        top: -8px;
+    }
+
+    .MainLandingPage .Footer .FooterLogo {
+        margin-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .MainLandingPage .Footer .FooterLogo p {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .MainLandingPage .Footer .FooterItem p {
+        width: 85%;
+    }
+
+    .MainLandingPage .Footer .FooterItem h3 {
+        font-size: 20px;
+    }
+
+    .MainLandingPage .Footer {
+        padding-bottom: 20px;
+    }
+
+    .MainLandingPage .copyRight {
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+
+    .MainLandingPage .StartSellingBox {
+        padding: 50px 40px;
+    }
+
+    .MainLandingPage .StartSellingBox .customInput {
+        width: 90%;
+    }
+
+    .MainLandingPage .SingleLandingItem img {
+        height: 300px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 720px) {
+
+    .MainLandingPage .CountDownContent {
+        display: block;
+        text-align: center;
+    }
+
+    .MainLandingPage .CountDown .left {
+        display: block;
+    }
+
+    .MainLandingPage .CountDown .left p {
+        width: 100%;
+    }
+
+    .MainLandingPage .CountDownBox {
+        margin: 10px 0;
+        margin-bottom: 15px;
+    }
+
+    .MainLandingPage .JoinNow {
+        margin: 0 auto;
+    }
+
+    .MainLandingPage .CountDown .JoinNow a {
+        padding: 5px 12px;
+        font-size: 16px;
+    }
+
+    .MainLandingPage h1 {
+        font-size: 26px;
+        line-height: 40px;
+    }
+
+    .MainLandingPage .Banner {
+        padding: 50px 0;
+        height: 400px;
+    }
+
+    .MainLandingPage .Banner .OverlayOne {
+        width: 30px;
+        height: 30px;
+    }
+
+    .MainLandingPage .Banner h4 {
+        font-size: 14px;
+        padding: 10px 16px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .MainLandingPage .BannerShop .BannerShopImg {
+        margin-top: 30px;
+    }
+
+    .MainLandingPage .BannerShop .BannerShopImg {
+        margin-top: -125px;
+    }
+
+    .MainLandingPage .Banner .OverlayOneImg {
+        top: 155px;
+        height: 30px;
+    }
+
+    .MainLandingPage .Platform {
+        margin-top: -40px;
+    }
+
+    .MainLandingPage .Platform .overlayThree img {
+        height: 50px;
+    }
+
+    .MainLandingPage .PlatformRight ul li {
+        font-size: 16px;
+        align-items: start;
+        text-align: left;
+    }
+
+    .MainLandingPage .PlatformRight ul li svg {
+        margin-right: 10px;
+        margin-bottom: 0;
+        margin-top: 8px;
+        font-size: 17px;
+    }
+
+    .MainLandingPage .SetUpOnlineShop {
+        height: 1000px;
+        margin-top: -90px;
+    }
+
+    .MainLandingPage .SetUpOnlineShopFlex {
+        flex-wrap: wrap;
+    }
+
+    .MainLandingPage .SetUpOnlineShopItem {
+        width: 48%;
+    }
+
+    .MainLandingPage .SetUpOnlineShop .Header {
+        margin-top: 220px;
+    }
+
+    .MainLandingPage .SetUpOnlineShop .overlayThree {
+        right: 10px;
+    }
+
+    .MainLandingPage .SetUpOnlineShop .overlayThree img {
+        height: 20px;
+    }
+
+    .MainLandingPage .SetUpOnlineShop .overlayOne {
+        left: 10px;
+    }
+
+    .MainLandingPage .SetUpOnlineShop .Header p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .MainLandingPage .PlatformRight {
+        margin-top: -30px;
+    }
+
+    .MainLandingPage h2 {
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    .MainLandingPage .BuiltForEveryone .Header h2 {
+        width: 100%;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs {
+        margin-top: 30px;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs li {
+        margin: 0;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .nav-tabs {
+        border: none;
+        justify-content: start;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent {
+        display: grid;
+        gap: 0;
+        margin-top: 30px;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Left {
+        order: 2;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Right {
+        order: 1;
+        width: 100%;
+    }
+
+    .MainLandingPage .BuiltForEveryoneTabs .BuiltTabsContent .Replace img {
+        width: auto;
+    }
+
+    .MainLandingPage .PowerfulFunnelItem {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .MainLandingPage .PowerfulFunnelItem h4 {
+        height: auto;
+        font-size: 18px;
+        line-height: 28px;
+        padding: 5px 0;
+    }
+
+    .MainLandingPage .IfHaveFunnelLiner .Video {
+        margin-top: 0;
+    }
+
+    .MainLandingPage .SingleLanding {
+        padding: 30px 0;
+        padding-bottom: 30px;
+        margin-top: 64px;
+    }
+
+    .MainLandingPage .MultiLanding .FrameFour {
+        top: 0;
+        left: 5px;
+        height: 40px;
+    }
+
+    .MainLandingPage .SingleLandingContent {
+        margin-top: 30px;
+    }
+
+    .MainLandingPage .MobileFriendlyLeft {
+        text-align: center;
+    }
+
+    .MainLandingPage .MobileFriendly .Frame9 {
+        top: 63px;
+        right: 8px;
+        height: 30px;
+    }
+
+    .MainLandingPage .MobileFriendlyItem {
+        width: 47%;
+    }
+
+    .MainLandingPage .AskQuestionTabs button {
+        font-size: 16px;
+    }
+
+    .MainLandingPage .AskQuestionTabs button img.minus {
+        width: 25px;
+        height: 25px;
+    }
+
+    .MainLandingPage .AskQuestionTabs button img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .MainLandingPage .StartSellingBox .customInput {
+        width: 100%;
+    }
+
+    .MainLandingPage .StartSellingBox .customInput button.bg {
+        position: unset;
+        padding: 10px 20px !important;
+    }
+
+    .MainLandingPage .StartSellingBox .customInput input {
+        padding: 10px 20px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .MainLandingPage .StartSellingBox {
+        padding: 30px 20px;
+    }
+
+    .MainLandingPage .Footer a {
+        font-size: 15px;
+        width: 88%;
+    }
+
+    .MainLandingPage .Footer {
+        padding-top: 200px;
+    }
+
+    .MainLandingPage .DesktopMenu {
+        display: none;
+    }
+
+    .MainLandingPage .MobileMenu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    .MainLandingPage .Logo img {
+        height: 25px;
+        width: auto;
+    }
+
+    .MainLandingPage .Login li a {
+        font-size: 15px;
+    }
+
+    .MainLandingPage .Menubar {
+        top: 0;
+        position: relative;
+    }
+
+    .MainLandingPage .Menubar .MobileMenubar img {
+        height: 34px;
+    }
+
+    .HomePageMobileMenuPopup :where(li, ul) {
+        list-style-type: none;
+        margin-left: 0 !important;
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .HomePageMobileMenuPopup a {
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration: none;
+        width: 100%;
+        margin-bottom: 10px;
+        color: #6C757D;
+    }
+
+    .MainLandingPage .Menubar {
+        padding: 15px 0;
+    }
+
+    .MainLandingPage .Menubar .MobileMenubar {
+        top: 12px;
+        background: none;
+        width: auto;
+    }
+
+    .MainLandingPage .Banner {
+        margin-top: -8px;
+    }
+
+    .MainLandingPage .swiper-pointer-events {
+        width: 100%;
+    }
+
+    .MainLandingPage .PersonalPlanItem {
+        width: 100%;
+        margin-top: 0px;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .MainLandingPage .PersonalPlanContent {
+        display: none;
+    }
+
+    .MainLandingPage .PersonalPlanContent.Mobile {
+        display: block;
+    }
+
+    .MainLandingPage .PersonalPlan {
+        height: 1200px;
+        margin-bottom: 40px;
+    }
+
+    .MainLandingPage .swiper-slide {
+        padding: 50px 10px;
+    }
+
+    .MainLandingPage .PersonalPlanItem .text ul li {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .MainLandingPage .CountDown {
+        position: unset;
+    }
+
+    .MobileMenu {
+        display: flex;
+        align-items: center;
+    }
+
+    .MainLandingPage .Login ul li {
+        margin-right: 10px;
+    }
+
+    .MainLandingPage .Login ul a {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid var(--main-color-bg);
+        color: var(--main-color);
+    }
+
+    .MainLandingPage .Login ul a:hover {
+        background: var(--main-color);
+        color: var(--white-color);
+    }
+
+}
+

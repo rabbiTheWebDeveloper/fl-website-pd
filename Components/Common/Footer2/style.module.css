@@ -1,0 +1,104 @@
+.footer {
+  margin-top: 18rem;
+}
+
+.footer .inner {
+  padding: 4rem 0;
+  background-color: #ebecef;
+}
+
+.footer img,
+.footer svg {
+  width: 100%;
+  height: 100%;
+}
+
+.footer p,
+.footer a,
+.footer h1,
+.footer h3 {
+  font-size: 1rem;
+  transition: color 200ms ease;
+}
+.footer h3 {
+  margin-top: 1rem;
+  font-weight: 700;
+  color: #414650;
+}
+.footer p {
+  color: #414650;
+  font-weight: 600;
+}
+
+.footer h1 {
+  color: #000;
+  font-weight: 900;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+
+.footer .row {
+  display: grid;
+  gap: 3.5rem;
+}
+
+.footer .social .icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.footer .social .icon a {
+  border-radius: 50%;
+  border: 1px solid #85898d;
+  color: #85898d;
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .social .icon a svg {
+  width: 0.8rem;
+}
+.footer .social .icon a:hover {
+  color: var(--main-color);
+}
+.footer .social .icon .instagram svg {
+  width: 1.6rem;
+}
+
+.footer .social .icon .whatsapp svg {
+  width: 1.6rem;
+}
+
+.footer .social .icon .youtube svg {
+  width: 1.6rem;
+}
+
+.footer li {
+  margin-bottom: 0.8rem;
+}
+
+.footer .copyright {
+  background-color: #dfe0e3;
+  padding: 1.45rem 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.footer .copyright a {
+  text-decoration: none;
+  color: #40a1f1;
+}
+
+@media (min-width: 768px) {
+  .footer .row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .footer .feature {
+    padding-left: 1.5rem;
+  }
+}

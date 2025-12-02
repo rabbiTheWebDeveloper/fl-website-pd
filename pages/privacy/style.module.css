@@ -1,0 +1,82 @@
+.privacy{
+    background: url('../../public/images/privacy-policy/privecy.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.privacyBanner{
+    background: url('../../public/images/privacy-policy/privacy-banner-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+    margin-top: 80px;
+}
+
+.privacyBanner h2{
+    font-size: 50px;
+    color: var(--white);
+}
+
+.privacyBanner .img{
+    text-align: right;
+}
+
+.privacyBanner .img img{
+    height: 300px;
+}
+
+/* descriptionPolicy */
+
+.descriptionPolicy {
+    padding: 80px 0;
+}
+
+.descriptionPolicy h2{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    color: #A16CF8;
+    margin-bottom: 50px;
+}
+
+.descriptionPolicy h3{
+    font-size: 25px;
+    line-height: 40px;
+    margin: 20px 0;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #6f6f6f;
+}
+
+.descriptionPolicy ul{
+    margin-top: 20px !important;
+}
+
+.descriptionPolicy p{
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 10px;
+}
+
+.descriptionPolicy ul li{
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 20px;
+    color: #6f6f6f;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.descriptionPolicy ul li:after{
+    position: absolute;
+    content: '';
+    top: 7px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #A16CF8;
+}

@@ -1,0 +1,287 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+.Register{
+    background: #F4F2F6;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif !important;
+    overflow: hidden;
+}
+
+.Register p{
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.RegisterForm{
+    text-align: center;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 20px;
+    overflow-y: auto;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    box-shadow: 0px 22px 113.46px rgba(0, 0, 0, 0.03), 0px -53px 66.4476px rgba(0, 0, 0, 0.0227778);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+}
+
+.RegisterFormLogo{
+    height: 65px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.RegisterForm .text {
+    margin-top: 10px;
+}
+
+.RegisterForm h3{
+    font-size: 30px;
+    line-height: 40px;
+    color: #2a2a2a;
+    font-weight: 700;
+}
+
+.HeaderPart{
+    border-bottom: .5px solid #ddd;
+    padding-bottom: 20px;
+    margin: 0 -40px;
+    margin-bottom: 30px;
+}
+
+.RegisterForm .text p {
+    margin: 0 auto;
+    margin-top: 5px;
+    line-height: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    max-width: 70%;
+}
+
+.form_part{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.CustomerInput{
+    text-align: left;
+    margin-top: 20px;
+    width: 48%;
+}
+
+.CustomerInput label {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #6f6f6f;
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #2A3547;
+}
+
+.CustomerInput label span{
+    color: #f44336;
+}
+
+.CustomerInputField{
+    width: 100% !important;
+    border-radius: 10px !important;
+    font-size: 13px !important;
+    line-height: 20px !important;
+    outline: none !important;
+    line-height: 18px;
+    font-weight: 400;
+    border: 1px solid #ddd;
+    color: var(--text-color);
+    width: -webkit-fill-available;
+    padding: 10px 20px !important;
+    border-radius: 8px;
+}
+
+.CustomerInputButton{
+    font-size: 16px;
+    line-height: 24px;
+    background: #894BCA;
+    color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    text-transform: capitalize;
+    border: 0;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.CustomerInputButton:hover {
+    background: #fb8c00 !important;
+    color: #fff;
+}
+
+
+.CustomerInputPara{
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.CustomerInputLink{
+    font-weight: 500 !important;
+    color: #894BCA;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.CustomerInput p a:hover{
+    color: #fb8c00;
+}
+
+
+/* width */
+
+.Register ::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.Register ::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+.Register ::-webkit-scrollbar-thumb {
+    background: #fb8c00;
+}
+
+/* Handle on hover */
+.Register ::-webkit-scrollbar-thumb:hover {
+    background: #fb8c00;
+}
+
+
+.ValidationError {
+    border: 1px solid #f44336!important;
+}
+
+.ValidationErrorLabel {
+    color: #f44336 !important;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+@media (max-width: 1440px) {
+
+    /* .RegisterForm .Overflow {
+        max-height: 580px;
+        width: 550px;
+    } */
+
+
+}
+
+
+@media (max-width: 1023px) {
+
+    .RegisterForm {
+        width: 90%;
+        padding: 25px;
+    }
+
+
+}
+
+@media (max-width: 767.9px) {
+
+   
+    .RegisterForm {
+        width: 92%;
+        padding: 20px;
+    }
+    
+    .HeaderPart {
+        margin: 0 -20px;
+    }
+
+    .ValidationErrorLabel {
+        color: #f44336 !important;
+        font-size: 11px;
+        line-height: 20px;
+    }
+
+    .CustomerInputField {
+        border-radius: 10px !important;
+        font-size: 12px !important;
+        line-height: 20px !important;
+        padding: 10px !important;
+    }
+
+    .CustomerInput label {
+        font-size: 14px;
+    }
+
+    .ValidationError {
+        border: 1px solid #f44336!important;
+        font-size: 11px !important;
+        padding: 8px 10px !important;
+    }
+
+    .CustomerInput {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .form_part {
+        overflow-y: scroll;
+        min-height: 380px;
+        height: 100%;
+        max-height: 500px;
+        padding: 10px 0;
+        padding-right: 10px;
+    }
+
+    .HeaderPart {
+        margin: 0 -20px;
+        padding: 0 10px;
+        padding-bottom: 20px;
+    }
+
+    .Register p {
+        font-size: 12px;
+    }
+
+    .RegisterFormLogo {
+        height: 55px;
+        margin-top: -15px;
+        margin-bottom: 10px;
+        width: auto;
+        object-fit: cover;
+    }
+
+    .CustomerInputButton {
+        padding: 8px;
+    }
+
+    .CustomerInputLink {
+        font-size: 14px;
+    }
+
+}
+
+
+
+
+
+
+

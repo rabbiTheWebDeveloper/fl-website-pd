@@ -1,0 +1,31 @@
+name: Push-from-Production-to-Server
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  deploy:
+    name: Deploy to Server on Production branch push
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the files
+        uses: actions/checkout@v2
+
+      # Step to build and restart the application
+      - name: Run npm build and restart the app
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.PROD_CLIENT_WEBSITE_HOST }}
+          username: ${{ secrets.PROD_CLIENT_WEBSITE_USERNAME }}
+          password: ${{ secrets.PROD_CLIENT_WEBSITE_PASSWORD }}
+          script: |
+            cd ${{ secrets.PROD_CLIENT_WEBSITE_TARGET_DIR }}
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
+            git fetch origin production
+            git reset --hard origin/production            
+            npm install --force
+            npm run build
+            pm2 restart FunnelLiner-client-website
