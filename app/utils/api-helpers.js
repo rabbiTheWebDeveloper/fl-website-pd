@@ -2,7 +2,6 @@ import { API_ENDPOINTS } from "../../config/ApiEndpoints";
 
 export const getData = async (shopName) => {
   try {
-    // Fetch domain info
     const domainRes = await fetch(
       `${API_ENDPOINTS.BASE_URL}${API_ENDPOINTS.SHOP.INFO}`,
       {
@@ -12,9 +11,9 @@ export const getData = async (shopName) => {
     );
 
     if (!domainRes.ok) throw new Error("Failed to fetch domain info");
+
     const { data: domainInfo } = await domainRes.json();
 
-    // Parallel fetching for slider + banner
     const [sliderRes, bannerRes] = await Promise.all([
       fetch(`${API_ENDPOINTS.BASE_URL}/shops/content?type=slider`, {
         headers: { "shop-id": domainInfo?.shop_id },
@@ -26,20 +25,25 @@ export const getData = async (shopName) => {
       }),
     ]);
 
-    // Parse responses in parallel too
     const [sliderData, bannerData] = await Promise.all([
       sliderRes.json(),
       bannerRes.json(),
     ]);
+
     return {
       ...domainInfo,
       slider: sliderData?.data || [],
       banner: bannerData?.data || [],
     };
   } catch (err) {
-    return null; // Return null instead of throwing (safer for SSR)
+    return {
+      theme_id: null,
+      slider: [],
+      banner: [],
+    };
   }
 };
+
 
 export const getOtherData = async (shopName, typeOfPage) => {
   const startTime = performance.now();
