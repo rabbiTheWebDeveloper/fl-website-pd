@@ -2,7 +2,7 @@ import { API_ENDPOINTS } from "../../config/ApiEndpoints";
 
 export const getData = async (shopName) => {
   const url = new URL(`${API_ENDPOINTS.BASE_URL}${API_ENDPOINTS.SHOP.INFO}`);
-
+console.log("Fetching data for shopName:", shopName);
   const domainRes = await fetch(url, {
     headers: { "domain": shopName },   // IMPORTANT
     cache: "no-store",
