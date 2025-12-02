@@ -24,7 +24,7 @@ const Home = ({ shopInfo = {} }) => {
       {!shopInfo && <PageLoader />}
       {shopInfo.theme_id == 201 && <Theme1 shopInfo={shopInfo} />}
 
-      {(shopInfo.theme_id === "null" || shopInfo.theme_id === null) && (
+      {(shopInfo?.theme_id === "null" || shopInfo?.theme_id === null) && (
         <DefaultTheme />
       )}
     </>
