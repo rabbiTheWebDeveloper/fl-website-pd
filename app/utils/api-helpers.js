@@ -5,7 +5,7 @@ export const getData = async (shopName) => {
   const domainRes = await fetch(
     url,
     {
-      headers: { domain: shopName },
+      headers:{domain: shopName },
       cache: "no-store",
     }
   );
