@@ -52,8 +52,7 @@ export const getOtherData = async (shopName, typeOfPage) => {
       headers: {
         domain: shopName,
       },
-      cache: "force-cache",
-      next: { revalidate: 900 }, // 24 hours
+     cache: "no-store",
     }
   );
   if (!response.ok) {
@@ -67,8 +66,7 @@ export const getOtherData = async (shopName, typeOfPage) => {
       headers: {
         "shop-id": domainInfo?.shop_id,
       },
-      cache: "force-cache",
-      next: { revalidate: 900 }, // 24 hours
+        cache: "no-store",
     }
   );
   const endTime = performance.now();
