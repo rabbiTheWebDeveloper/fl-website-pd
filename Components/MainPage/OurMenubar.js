@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React, { useRef, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { dashboardUrl } from '../../constant/constant';
 
 const OurMenubar = ({isShownCountDown}) => {
     const [show, setShow] = useState(false);
@@ -67,7 +68,7 @@ const OurMenubar = ({isShownCountDown}) => {
                             <div className="Login">
 
                                 <ul>
-                                    <li> <Link href='https://dashboard.funnelliner.com/login' target='_blank' className="bg"> Login </Link> </li>
+                                    <li> <Link href={dashboardUrl} target='_blank' className="bg"> Login </Link> </li>
                                     <li> <Link href='https://offer.funnelliner.com' className="bg"> Sign Up </Link> </li>
                                 </ul>
 
@@ -80,7 +81,7 @@ const OurMenubar = ({isShownCountDown}) => {
                             <div className="Login">
 
                                 <ul>
-                                    <li> <Link href='https://dashboard.funnelliner.com/login' target='_blank'> Login </Link> </li>
+                                    <li> <Link href={dashboardUrl} target='_blank'> Login </Link> </li>
                                     <li> <Link href='https://offer.funnelliner.com' target='_blank'> Sign Up </Link> </li>
                                 </ul>
 
